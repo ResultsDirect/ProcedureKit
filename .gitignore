@@ -46,3 +46,4 @@ docs
 .fastlane/README.md
 .ci/results/**
 /Integrations/SPM/Package.resolved
+/.swiftpm

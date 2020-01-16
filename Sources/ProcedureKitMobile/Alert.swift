@@ -4,7 +4,11 @@
 //  Copyright © 2015-2018 ProcedureKit. All rights reserved.
 //
 
-import Foundation
+#if canImport(UIKit)
+#if SWIFT_PACKAGE
+  import ProcedureKit
+  import Foundation
+#endif
 import UIKit
 
 /**
@@ -203,4 +207,4 @@ open class AlertProcedure: Procedure {
     }
 }
 
-
+#endif

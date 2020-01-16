@@ -4,6 +4,7 @@
 //  Copyright © 2015-2018 ProcedureKit. All rights reserved.
 //
 
+#if canImport(AppKit)
 #if SWIFT_PACKAGE
     import ProcedureKit
     import Foundation
@@ -104,6 +105,8 @@ open class ProcessProcedure: Procedure, InputProcedure, OutputProcedure {
             case 0: return true
             default: return false
             }
+        @unknown default:
+            fatalError("Unhandled termination reason")
         }
     }
 
@@ -547,3 +550,5 @@ public extension ProcessProcedure {
     @available(*, unavailable, renamed: "currentDirectoryURL")
     var currentDirectoryPath: String? { fatalError("Use currentDirectoryURL") }
 }
+
+#endif

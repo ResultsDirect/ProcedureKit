@@ -4,7 +4,7 @@
 //  Copyright © 2015-2018 ProcedureKit. All rights reserved.
 //
 
-
+#if canImport(AppKit)
 import XCTest
 import TestingProcedureKit
 import Foundation
@@ -378,3 +378,6 @@ extension Process.TerminationReason: CustomStringConvertible {
         }
     }
 }
+
+#endif
+
