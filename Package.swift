@@ -10,8 +10,8 @@ pkg.swiftLanguageVersions = [
 
 pkg.platforms = [
     .macOS(.v10_11),
-    .iOS(.v10),
-    .tvOS(.v10),
+    .iOS(.v12),
+    .tvOS(.v12),
     .watchOS(.v3),
 ]
 

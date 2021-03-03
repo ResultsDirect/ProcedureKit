@@ -1,10 +1,15 @@
-// swift-tools-version:4.2
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
     name: "SPM-Integration-Check",
+    platforms: [
+        .macOS(.v10_11),
+        .iOS(.v12),
+        .tvOS(.v12),
+        .watchOS(.v3),
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
