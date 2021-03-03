@@ -53,7 +53,7 @@ open class ResultProcedure<Output>: BlockProcedure, OutputProcedure {
 
     public init(block: @escaping () throws -> Output) {
         super.init { (procedure) in
-            var outputProcedure = procedure as! ResultProcedure<Output>
+            let outputProcedure = procedure as! ResultProcedure<Output>
             defer { outputProcedure.finish(with: outputProcedure.output.error) }
             do { outputProcedure.output = .ready(.success(try block())) }
             catch { outputProcedure.output = .ready(.failure(error)) }

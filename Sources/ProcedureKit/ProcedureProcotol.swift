@@ -6,7 +6,7 @@
 
 import Foundation
 
-public protocol ProcedureProtocol: class {
+public protocol ProcedureProtocol: AnyObject {
 
     var procedureName: String { get }
 

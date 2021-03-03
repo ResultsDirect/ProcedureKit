@@ -42,7 +42,7 @@ public enum ReachabilityError: Error {
     case failedToSetNotifierDispatchQueue
 }
 
-public protocol NetworkReachabilityDelegate: class {
+public protocol NetworkReachabilityDelegate: AnyObject {
 
     func didChangeReachability(flags: SCNetworkReachabilityFlags)
 }

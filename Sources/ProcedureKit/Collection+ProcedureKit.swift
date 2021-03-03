@@ -23,9 +23,6 @@ extension Collection where Iterator.Element: Operation {
         return (operations, procedures)
     }
 
-    internal var conditions: [Condition] {
-        return compactMap { $0 as? Condition }
-    }
     
     @available(*, deprecated, message: "Use underlying quality of service APIs instead.")
     internal var userIntent: UserIntent {

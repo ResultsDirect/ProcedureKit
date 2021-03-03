@@ -243,7 +243,7 @@ extension Procedure: QueueProvider {
 
 // MARK: - DispatchQueueProtocol
 
-public protocol DispatchQueueProtocol: class {
+public protocol DispatchQueueProtocol: AnyObject {
     @discardableResult func asyncDispatch(block: @escaping () -> Void) -> DispatchWorkItem
     @discardableResult func asyncDispatch(minimumQoS: DispatchQoS, block: @escaping () -> Void) -> DispatchWorkItem
     func dispatchNotify(withGroup group: DispatchGroup, block: @escaping () -> Void)

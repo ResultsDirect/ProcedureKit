@@ -54,7 +54,7 @@ import Foundation
     instances added to a ProcedureQueue simultaneously. (i.e. Once for each Operation.)
  
  */
-public protocol ProcedureQueueDelegate: class {
+public protocol ProcedureQueueDelegate: AnyObject {
 
     // MARK: - Operations
 
@@ -615,7 +615,7 @@ fileprivate class _SyncAlreadyAvailableFuture: ProcedureFuture {
 // MARK: - Unavilable & Renamed
 
 @available(*, unavailable, renamed: "ProcedureQueueDelegate")
-public protocol OperationQueueDelegate: class { }
+public protocol OperationQueueDelegate: AnyObject { }
 
 public extension ProcedureQueue {
 
